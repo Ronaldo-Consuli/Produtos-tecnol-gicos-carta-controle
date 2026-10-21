@@ -3669,7 +3669,7 @@ return Plotly;
 <div class="wrap">
   <div class="header">
     <h1>Carta controle NIR DS-3</h1>
-    <div class="meta" id="metaRelatorio">Atualizado em 21/10/2026 21:56:23</div>
+    <div class="meta" id="metaRelatorio">Atualizado em 21/10/2026 22:13:10</div>
   </div>
 
   <div class="card">
@@ -3831,7 +3831,7 @@ function atualizarMeta(linhas, limites) {
   const datas = linhas.map(r => r.DataHora).filter(Boolean).map(v => new Date(v)).filter(d => !Number.isNaN(d.getTime())).sort((a,b)=>a-b);
   const periodo = datas.length ? `${fmtData(datas[0].toISOString()).slice(0,10)} — ${fmtData(datas[datas.length-1].toISOString()).slice(0,10)}` : 'sem data válida';
   const verificacao = selVerificacao.value === 'Todos' ? 'Todas as verificações' : `Verificação ${selVerificacao.value}`;
-  document.getElementById('metaRelatorio').innerHTML = `Produto: ${escapeHtml(selProduto.value)} &nbsp;·&nbsp; Ensaio: ${escapeHtml(selEnsaio.value)} &nbsp;·&nbsp; ${escapeHtml(verificacao)}<br>Período ${periodo} &nbsp;·&nbsp; Método de limites: ${escapeHtml(limites.metodo)} &nbsp;·&nbsp; Atualizado em 21/10/2026 21:56:23`;
+  document.getElementById('metaRelatorio').innerHTML = `Produto: ${escapeHtml(selProduto.value)} &nbsp;·&nbsp; Ensaio: ${escapeHtml(selEnsaio.value)} &nbsp;·&nbsp; ${escapeHtml(verificacao)}<br>Período ${periodo} &nbsp;·&nbsp; Método de limites: ${escapeHtml(limites.metodo)} &nbsp;·&nbsp; Atualizado em 21/10/2026 22:13:10`;
 }
 
 function escapeHtml(texto) {
